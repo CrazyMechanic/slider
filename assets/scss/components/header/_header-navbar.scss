@@ -113,9 +113,11 @@
 
   &__link {
     display: block;
-    color: $color-green-dark;
+
     transition: color 0.5s;
     letter-spacing: 0.1em;
+
+    color: $color-green-dark;
 
     font-size: 1.125rem;
 

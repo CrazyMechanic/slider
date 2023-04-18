@@ -9,7 +9,9 @@
   left: 0;
 
   padding: $gap 0;
+
   background-color: rgba($color-white, 0.3);
+
   @include box-shadow;
 
   &__container {

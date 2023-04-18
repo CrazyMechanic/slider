@@ -2,31 +2,36 @@
 @use "../../mixins" as *;
 .slides {
   position: absolute;
-  height: 100vh;
-  width: 100%;
   z-index: -1;
-  padding: 0px;
-  margin: 0px 0px 20px 0px;
-  list-style-type: none;
   top: 0;
   left: 0;
+
+  width: 100%;
+  height: 100vh;
+  margin: 0 0 20px 0;
+  padding: 0;
+
+  list-style-type: none;
 }
 
 .slide {
   position: absolute;
-  left: 0px;
-  top: 0px;
+  z-index: 1;
+  top: 0;
+  left: 0;
+
+  box-sizing: border-box;
   width: 100%;
   height: 100%;
-  opacity: 0;
-  z-index: 1;
+  padding: 40px;
+
   transition: opacity 1s;
 
-  font-size: 40px;
-  padding: 40px;
-  box-sizing: border-box;
-  background: $color-green-dark;
+  opacity: 0;
   color: $color-white;
+  background: $color-green-dark;
+
+  font-size: 40px;
 
   &:nth-of-type(1) {
     background-image: url(../img/img1.jpg);
@@ -36,7 +41,6 @@
   &:nth-of-type(2) {
     background-image: url(../img/img2.jpg);
     background-size: cover;
-
   }
 
   &:nth-of-type(3) {
@@ -56,6 +60,7 @@
 }
 
 .active {
-  opacity: 1;
   z-index: 2;
+
+  opacity: 1;
 }

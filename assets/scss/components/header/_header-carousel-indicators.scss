@@ -2,36 +2,36 @@
 @use "../../mixins" as *;
 
 .indicators {
-  padding-top: 10px;
-  display: flex;
-  gap: $gap-x2;
-  margin-bottom: 20px;
-
   position: absolute;
   bottom: 0;
 
-  width: 100%;
+  display: flex;
   justify-content: center;
 
+  width: 100%;
+  margin-bottom: 20px;
+  padding-top: 10px;
 
+  gap: $gap-x2;
 }
 
 .indicator {
-  padding: 0.5em;
   display: flex;
-  user-select: none;
-  cursor: pointer;
   justify-content: center;
 
-  background-color: rgba($color-green-light, 0.893);
+  padding: 0.5em;
+
+  cursor: pointer;
+  user-select: none;
+
   color: $color-green-dark;
+  background-color: rgba($color-green-light, 0.893);
+
   @include border-style;
   @include box-shadow;
-
   @include md-min {
     min-width: 80px;
   }
-
   @include md-sm {
     min-width: 55px;
   }
@@ -41,6 +41,6 @@
   }
 
   &:hover {
-    @include border-style-stand
+    @include border-style-stand;
   }
 }

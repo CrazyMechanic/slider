@@ -9,14 +9,14 @@
 
 @mixin border-style {
   border-color: $color-green-light;
-  border-radius: 15px 0px 15px 0px;
+  border-radius: 15px 0 15px 0;
 }
 
 @mixin border-style-stand {
-  background-color: rgba($color-white, 0.893);
   color: $color-green-light;
   border-color: $color-green-light;
-  border-radius: 15px 0px 15px 0px;
+  border-radius: 15px 0 15px 0;
+  background-color: rgba($color-white, 0.893);
 }
 
 @mixin box-shadow {
