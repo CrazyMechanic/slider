@@ -1,2 +1,49 @@
 @use "../../presets" as *;
 @use "../../mixins" as *;
+
+.header-content {
+  position: absolute;
+  z-index: 1;
+
+  @include ul-min {
+    position: relative;
+  }
+
+  @include ul-xl {
+    top: 34%;
+  }
+
+  @include xl-md {
+    top: 32%;
+  }
+
+  @include md-sm {
+    top: 30%;
+  }
+
+  @include sm {
+    top: 26%;
+    min-width: 420px;
+  }
+
+  &__container {
+    background-color: rgba($color-white, 0.75);
+    color: $color-green-dark;
+    border-radius: 6px;
+
+    @include box-shadow;
+    @extend %container;
+  }
+
+  &__title {
+    padding-top: 15px;
+    text-align: center;
+  }
+
+  &__text {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,46 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.indicators {
+  padding-top: 10px;
+  display: flex;
+  gap: $gap-x2;
+  margin-bottom: 20px;
+
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+  justify-content: center;
+
+
+}
+
+.indicator {
+  padding: 0.5em;
+  display: flex;
+  user-select: none;
+  cursor: pointer;
+  justify-content: center;
+
+  background-color: rgba($color-green-light, 0.893);
+  color: $color-green-dark;
+  @include border-style;
+  @include box-shadow;
+
+  @include md-min {
+    min-width: 80px;
+  }
+
+  @include md-sm {
+    min-width: 55px;
+  }
+
+  &.active {
+    @include border-style-stand;
+  }
+
+  &:hover {
+    @include border-style-stand
+  }
+}
