@@ -181,9 +181,9 @@ li{
   z-index:1;
 }
 .header-content__container{
-  background-color:rgba(255, 255, 255, 0.75);
-  color:#182E01;
+  color:#182e01;
   border-radius:6px;
+  background-color:rgba(255, 255, 255, 0.75);
   box-shadow:-3px 3px 20px -10px black;
 }
 .header-content__title{
@@ -191,26 +191,26 @@ li{
   text-align:center;
 }
 .header-content__text{
-  padding-left:10px;
   padding-right:10px;
   padding-bottom:10px;
+  padding-left:10px;
   text-align:center;
 }
 
 .header-logo__link{
   display:block;
   letter-spacing:0.22em;
+  color:#182e01;
   font-size:1.5rem;
-  color:#182E01;
 }
 .header-logo__accent{
-  font-weight:1000;
-  color:#4b9502;
   display:inline-block;
   margin-right:4px;
-  padding:14px 1px 13px 0px;
+  padding:14px 1px 13px 0;
+  color:#4b9502;
   border-right:10px solid #d53d27;
   border-radius:6px;
+  font-weight:1000;
 }
 
 .header-menu{
@@ -294,45 +294,45 @@ li{
 }
 .header-navbar__link{
   display:block;
-  color:#182E01;
   transition:color 0.5s;
   letter-spacing:0.1em;
+  color:#182e01;
   font-size:1.125rem;
 }
 .header-navbar__link:hover, .header-navbar__link:focus{
-  background-color:rgba(255, 255, 255, 0.893);
   color:#4b9502;
   border-color:#4b9502;
-  border-radius:15px 0px 15px 0px;
+  border-radius:15px 0 15px 0;
+  background-color:rgba(255, 255, 255, 0.893);
   box-shadow:-3px 3px 20px -10px black;
 }
 
 .slides{
   position:absolute;
-  height:100vh;
-  width:100%;
   z-index:-1;
-  padding:0px;
-  margin:0px 0px 20px 0px;
-  list-style-type:none;
   top:0;
   left:0;
+  width:100%;
+  height:100vh;
+  margin:0 0 20px 0;
+  padding:0;
+  list-style-type:none;
 }
 
 .slide{
   position:absolute;
-  left:0px;
-  top:0px;
+  z-index:1;
+  top:0;
+  left:0;
+  box-sizing:border-box;
   width:100%;
   height:100%;
-  opacity:0;
-  z-index:1;
-  transition:opacity 1s;
-  font-size:40px;
   padding:40px;
-  box-sizing:border-box;
-  background:#182E01;
+  transition:opacity 1s;
+  opacity:0;
   color:#ffffff;
+  background:#182e01;
+  font-size:40px;
 }
 .slide:nth-of-type(1){
   background-image:url(../img/img1.jpg);
@@ -356,45 +356,49 @@ li{
 }
 
 .active{
-  opacity:1;
   z-index:2;
+  opacity:1;
 }
 
 .controls{
   position:absolute;
   top:0;
+  display:flex;
   width:100%;
   height:100%;
-  display:flex;
-  gap:20px;
   margin-bottom:20px;
+  gap:20px;
 }
 
 .control{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  user-select:none;
-  cursor:pointer;
   position:absolute;
   z-index:1;
   top:calc(30.6% - 20vh);
   bottom:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  user-select:none;
 }
 .control-pause{
   top:calc(70% - 20vh);
-  left:calc(50% - 20vh);
+  left:50%;
   height:0;
   padding:0;
-  font-size:40vh;
   transition:opacity 0.25s ease-out;
   opacity:0;
+  font-size:40vh;
+}
+.control-pause span{
+  position:absolute;
+  display:block;
 }
 .control-pause:hover, .control-pause:focus{
   transition:opacity 1s ease-in 0.5s;
   opacity:1;
-  text-shadow:0 0 30px rgba(255, 255, 255, 0.3);
   color:#ffffff;
+  text-shadow:0 0 30px rgba(255, 255, 255, 0.3);
 }
 .control-prev{
   left:0;
@@ -405,8 +409,8 @@ li{
   text-shadow:0 0 10px #ffffff;
 }
 .control-prev i{
-  color:#182E01;
   transform:scaleX(-1);
+  color:#182e01;
   font-size:4.5vh;
 }
 .control-next{
@@ -418,45 +422,45 @@ li{
   text-shadow:0 0 10px #ffffff;
 }
 .control-next i{
-  color:#182E01;
   padding:10px;
+  color:#182e01;
   font-size:4.5vh;
 }
 
 .indicators{
-  padding-top:10px;
-  display:flex;
-  gap:40px;
-  margin-bottom:20px;
   position:absolute;
   bottom:0;
-  width:100%;
+  display:flex;
   justify-content:center;
+  width:100%;
+  margin-bottom:20px;
+  padding-top:10px;
+  gap:40px;
 }
 
 .indicator{
-  padding:0.5em;
   display:flex;
-  user-select:none;
-  cursor:pointer;
   justify-content:center;
+  padding:0.5em;
+  cursor:pointer;
+  user-select:none;
+  color:#182e01;
   background-color:rgba(75, 149, 2, 0.893);
-  color:#182E01;
   border-color:#4b9502;
-  border-radius:15px 0px 15px 0px;
+  border-radius:15px 0 15px 0;
   box-shadow:-3px 3px 20px -10px black;
 }
 .indicator.active{
-  background-color:rgba(255, 255, 255, 0.893);
   color:#4b9502;
   border-color:#4b9502;
-  border-radius:15px 0px 15px 0px;
+  border-radius:15px 0 15px 0;
+  background-color:rgba(255, 255, 255, 0.893);
 }
 .indicator:hover{
-  background-color:rgba(255, 255, 255, 0.893);
   color:#4b9502;
   border-color:#4b9502;
-  border-radius:15px 0px 15px 0px;
+  border-radius:15px 0 15px 0;
+  background-color:rgba(255, 255, 255, 0.893);
 }
 
 .header{

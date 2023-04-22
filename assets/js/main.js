@@ -1,5 +1,11 @@
-// eslint-disable-next-line no-undef
-const carousel = new SwipeCarousel();
+import SwipeCarousel from './swipe-carousel.js';
+
+const carousel = new SwipeCarousel({
+  // containerID: '.carousel',
+  // slideID: '.slide',
+  // interval: 2000,
+  // isPlaying: true
+});
 
 carousel.init();
 

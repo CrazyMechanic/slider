@@ -29,7 +29,7 @@
 
   &-pause {
     top: calc(70% - 20vh);
-    left: calc(50% - 20vh);
+    left: 50%;
 
     height: 0;
     padding: 0;
@@ -39,6 +39,12 @@
     opacity: 0;
 
     font-size: 40vh;
+
+    & span {
+      position: absolute;
+
+      display: block;
+    }
 
     &:hover,
     &:focus {
